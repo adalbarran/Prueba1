@@ -12,21 +12,21 @@
   <form [formGroup] = 'FormCrearUsuario'>
 
     <ion-item>
-      <ion-input formControlName="nombre_usuario" label="Nombre de usuario" labelPlacement="floating" placeholder="···"></ion-input>
+      <ion-input formControlName="nombre_usuario" label="Nombre de usuario " labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
     </ion-item>
       
     <ion-item>
-      <ion-input formControlName="contrasena" label="Contraseña" labelPlacement="floating" placeholder="···"></ion-input>
+      <ion-input formControlName="contrasena" type="password"  required=true label="Contraseña"  labelPlacement="floating" placeholder="···"></ion-input>
     </ion-item>
     <ion-button (click)="crearUsuario()" expand="block" > Iniciar Sesion </ion-button>
+    <ion-button expand="block" routerLink = "/rest"> Restablecer Contraseña </ion-button>
 
 
   </form>
 
 
   </ion-list>
-  <ion-button expand="block" href=""> Volver </ion-button>
-
+  <ion-button expand="block" routerLink=""> Volver </ion-button>
 
 
 </ion-content>

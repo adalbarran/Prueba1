@@ -16,13 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./ingreso-usuario/ingreso-usuario.module').then( m => m.IngresoUsuarioPageModule)
   },
   {
-    path: 'rest-contrasena',
+    path: 'rest',
     loadChildren: () => import('./rest-contrasena/rest-contrasena.module').then( m => m.RestContrasenaPageModule)
   },
   {
     path: 'listado-usuario',
     loadChildren: () => import('./listado-usuario/listado-usuario.module').then( m => m.ListadoUsuarioPageModule)
-  },  {
+  },
+  {
     path: 'crear-usuario',
     loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
   },

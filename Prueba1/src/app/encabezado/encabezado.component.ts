@@ -9,12 +9,12 @@ import{ LoginService} from '../state/login.service';
 export class EncabezadoComponent  implements OnInit {
 
   Usuario: string;
-  Mensaje: string;
 
   constructor(private loginService: LoginService) {
     this.Usuario = this.loginService.getUsuarioo();
 
-    this.Mensaje = 'Bienvenido';
+
+    
    }
 
   ngOnInit() {

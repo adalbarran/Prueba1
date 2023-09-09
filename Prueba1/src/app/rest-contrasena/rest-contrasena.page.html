@@ -1,13 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>rest_contrasena</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Restablecer Contraseña</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">rest_contrasena</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Content</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button name="apps-outline"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Bienvenido  </ion-content>
+  </div>
+
+<ion-list>
+    <form [formGroup] = 'FormRestUsuario'>
+  
+      <ion-item>
+        <ion-input formControlName="nombre_usuario" label="Nombre de usuario" labelPlacement="floating" placeholder="···"></ion-input>
+        
+      </ion-item>
+      <ion-item>
+      <ion-button (click)="RestUsuario()" expand="block" > Restablecer  </ion-button> 
+    </ion-item>
+  
+  
+    </form>
+  
+  
+</ion-list>
+
+
+
 </ion-content>

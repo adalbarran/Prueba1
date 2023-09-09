@@ -57,18 +57,18 @@ export class IngresoUsuarioPage implements OnInit {
       return;
     }
 
-    if (usuario.nombre_usuario == this.FormCrearUsuario.get('nombre_usuario')?.value || usuario.contrasena == this.FormCrearUsuario.get('contrasena')?.value) {
+    if (usuario.nombre_usuario == this.FormCrearUsuario.get('nombre_usuario')?.value ) {
     const nombreUsuario = this.FormCrearUsuario.get('nombre_usuario')?.value;
     // Si los campos no están vacíos, puedes proceder con la autenticación o redirección.
     // Agrega tu lógica de autenticación aquí.
 
     usuario.nombre_usuario = nombreUsuario;
-      this.router.navigate(['']);
+      
       this.loginService.setUsuarioo(nombreUsuario);
+      this.router.navigate(['']);
 
     }
 
-    
 
   }  
 
