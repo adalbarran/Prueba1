@@ -1,0 +1,29 @@
+<app-encabezado>
+  
+</app-encabezado>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>listado_usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">listado_usuario</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let us of usuario">
+    <ion-card-header>
+      <ion-card-title>{{us.nombre_usuario}}</ion-card-title>
+      <ion-card-subtitle>{{us.contrasena}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-button expand="block" routerLink = ""> Volver </ion-button>
+
+  </ion-card>
+
+
+</ion-content>
