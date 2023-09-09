@@ -1,12 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title><app-encabezado></app-encabezado></ion-title>
+  </ion-toolbar>
+</ion-header>
+
 
 
 
 
 
 <ion-content [fullscreen]="true">
-  <app-encabezado>
-  
-  </app-encabezado>
+
   
   <ion-menu contentId="main-content">
     <ion-header>
@@ -26,10 +30,23 @@
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">  </ion-content>
+    <ion-content class="ion-padding"> Bienvenido  </ion-content>
   </div>
+  
+<ion-list>
+    <form>
+  
+   
 
-  <ion-button expand="block" routerLink = "./ingreso-usuario"> Iniciar Sesion </ion-button>
+      <ion-item>
+        <ion-button expand="block" routerLink = "./ingreso-usuario"> Iniciar Sesion </ion-button>
+      </ion-item>
+  
+  
+    </form>
+  
+  
+</ion-list>
 
 
 </ion-content>
