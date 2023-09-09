@@ -14,4 +14,4 @@ import { EncabezadoComponent} from './encabezado.component';
   declarations: [EncabezadoComponent],
   exports: [EncabezadoComponent]
 })
-export class encabezadoModule {}
+export class encabezadoModule {} 

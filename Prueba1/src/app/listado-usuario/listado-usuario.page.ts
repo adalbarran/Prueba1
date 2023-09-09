@@ -14,8 +14,8 @@ interface Usuarios {
 export class ListadoUsuarioPage implements OnInit {
   usuario : Usuarios[] = [
     {
-      nombre_usuario: 'Esteban',
-      contrasena: 'Esteban123'
+      nombre_usuario: 'ADMIN',
+      contrasena: 'ADMIN'
     },
 
   ]

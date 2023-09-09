@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../state/login.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,16 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class InicioPage implements OnInit {
+  usuario: string;
 
-  constructor() { }
-
-  ngOnInit() {
-
-
-
+  constructor(private loginService: LoginService) {
+    this.usuario = this.loginService.getUsuarioo(); 
 
   }
 
+  ngOnInit() {
+    // Tu lógica de inicialización aquí
+  }
   
-
 }

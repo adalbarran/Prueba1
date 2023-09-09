@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ LoginService} from '../state/login.service';
+
 @Component({
   selector: 'app-encabezado',
   templateUrl: './encabezado.component.html',
@@ -7,16 +8,20 @@ import{ LoginService} from '../state/login.service';
 })
 export class EncabezadoComponent  implements OnInit {
 
-  usuario: string = ''
+  Usuario: string;
+  Mensaje: string;
 
+  constructor(private loginService: LoginService) {
+    this.Usuario = this.loginService.getUsuarioo();
 
-  constructor(private LoginService: LoginService) { }
+    this.Mensaje = 'Bienvenido';
+   }
 
   ngOnInit() {
-    this.LoginService.getUsuario.subscribe((usuario) =>{
-      this.usuario = usuario;
+    //   this.LoginService.getUsuario.subscribe((usuario) =>{
+    //   this.usuario = usuario;
       
-    })
+    // })
   }
 
 }
