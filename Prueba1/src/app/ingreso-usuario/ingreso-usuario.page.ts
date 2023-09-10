@@ -64,7 +64,7 @@ export class IngresoUsuarioPage implements OnInit {
 
     usuario.nombre_usuario = nombreUsuario;
       
-      this.loginService.setUsuarioo(nombreUsuario);
+      this.loginService.setNombreUsuario(nombreUsuario);
       this.router.navigate(['']);
 
     }

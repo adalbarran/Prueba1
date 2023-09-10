@@ -14,7 +14,7 @@ export class RestContrasenaPage implements OnInit {
   FormRestUsuario:FormGroup;
 
   constructor(private fb:FormBuilder, private loginService: LoginService, private router:Router) {    
-    this.usuario = this.loginService.getUsuarioo(); 
+    this.usuario = this.loginService.getNombreUsuario(); 
     this.FormRestUsuario = this.fb.group({
     nombre_usuario: [''],
 
@@ -24,6 +24,8 @@ export class RestContrasenaPage implements OnInit {
 
   ngOnInit() {
   }
+
+
 
   RestUsuario() {
 
@@ -50,7 +52,7 @@ export class RestContrasenaPage implements OnInit {
 
     usuario.nombre_usuario = nombreUsuario;
       
-      this.loginService.setUsuarioo(nombreUsuario);
+      this.loginService.setNombreUsuario(nombreUsuario);
       this.router.navigate(['']);
 
     }

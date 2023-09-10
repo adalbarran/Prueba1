@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-  private usuarioo: string = '';
+  private nombreUsuario: string = '';
 
 
-
-  setUsuarioo(usuario: string) {
-    this.usuarioo = usuario;
+  getNombreUsuario() {
+    return this.nombreUsuario;
   }
-  getUsuarioo() {
-    return this.usuarioo;
+
+  setNombreUsuario(Nombre: string) {
+    this.nombreUsuario = Nombre;
   }
 
   constructor() { }

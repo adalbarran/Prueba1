@@ -8,15 +8,15 @@ import { LoginService } from '../state/login.service';
 })
 
 export class InicioPage implements OnInit {
-  usuario: string;
+  nombreUsuario: string;
 
   constructor(private loginService: LoginService) {
-    this.usuario = this.loginService.getUsuarioo(); 
-
+    this.nombreUsuario = this.loginService.getNombreUsuario(); 
   }
 
   ngOnInit() {
     // Tu lógica de inicialización aquí
   }
   
+
 }

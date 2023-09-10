@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title><app-encabezado></app-encabezado></ion-title>
+    <app-encabezado></app-encabezado>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,17 @@
         <ion-title>Menu Content</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
+    <ion-content class="ion-padding">
+      <ion-content color="light">
+        <ion-list [inset]="true">
+          <ion-item>
+            <ion-label>
+              <ion-button expand="block" routerLink = "./ingreso-usuario"> Iniciar Sesion </ion-button>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-content>
   </ion-menu>
   
   <div class="ion-page" id="main-content">
@@ -30,23 +40,21 @@
         <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding"> Bienvenido  </ion-content>
+    <ion-content class="ion-padding">
+      <h1 id="welcome" class="titulo"><strong>Bienvenido {{ nombreUsuario }}</strong></h1> 
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
   </div>
-  
-<ion-list>
-    <form>
-  
-   
-
-      <ion-item>
-        <ion-button expand="block" routerLink = "./ingreso-usuario"> Iniciar Sesion </ion-button>
-      </ion-item>
-  
-  
-    </form>
-  
-  
-</ion-list>
 
 
 </ion-content>
