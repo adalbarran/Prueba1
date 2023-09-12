@@ -12,6 +12,7 @@ interface Usuarios {
   selector: 'app-ingreso-usuario',
   templateUrl: './ingreso-usuario.page.html',
   styleUrls: ['./ingreso-usuario.page.scss'],
+  
 })
 export class IngresoUsuarioPage implements OnInit {
 
@@ -24,6 +25,7 @@ export class IngresoUsuarioPage implements OnInit {
     },
 
   ]
+  
 
   constructor(private fb:FormBuilder, private router:Router, private loginService: LoginService) {
     this.FormCrearUsuario = this.fb.group({
@@ -52,7 +54,7 @@ export class IngresoUsuarioPage implements OnInit {
 
     if (!usuario.nombre_usuario || !usuario.contrasena) {
       
-      this.router.navigate(['/crear-usuario']);
+      this.router.navigate(['/ingreso-usuario']);
       
       return;
     }

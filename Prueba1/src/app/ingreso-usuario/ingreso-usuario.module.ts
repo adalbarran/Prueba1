@@ -9,6 +9,7 @@ import { encabezadoModule } from '../encabezado/encabezado.module';
 
 import { IngresoUsuarioPage } from './ingreso-usuario.page';
 
+import { alertModule } from '../alert/alert.module';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +17,8 @@ import { IngresoUsuarioPage } from './ingreso-usuario.page';
     IonicModule,
     IngresoUsuarioPageRoutingModule,
     ReactiveFormsModule,
-    encabezadoModule
+    encabezadoModule,
+    alertModule
 
 
   ],
