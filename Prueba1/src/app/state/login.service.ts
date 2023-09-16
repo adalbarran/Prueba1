@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private nombreUsuario: string = '';
+  private nombreUsuario: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
 
   getNombreUsuario() {
-    return this.nombreUsuario;
+    return this.nombreUsuario.asObservable();
   }
 
-  setNombreUsuario(Nombre: string) {
-    this.nombreUsuario = Nombre;
+  setNombreUsuario(nombreUsuario: string) {
+    this.nombreUsuario.next(nombreUsuario);
   }
 
   constructor() { }

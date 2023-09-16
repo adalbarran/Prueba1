@@ -13,7 +13,8 @@ export class RestContrasenaPage implements OnInit {
 
   FormRestUsuario:FormGroup;
 
-  constructor(private fb:FormBuilder, private loginService: LoginService, private router:Router) {    
+  constructor(private fb:FormBuilder, private loginService: LoginService, private router:Router) {  
+    private stateService: LoginService  
     this.usuario = this.loginService.getNombreUsuario(); 
     this.FormRestUsuario = this.fb.group({
     nombre_usuario: [''],
