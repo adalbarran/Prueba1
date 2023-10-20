@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { LoginService } from '../state/login.service';
+import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,55 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./rest-contrasena.page.scss'],
 })
 export class RestContrasenaPage implements OnInit {
-  usuario: string;
+  formularioRecuperar:FormGroup;
 
-  FormRestUsuario:FormGroup;
-
-  constructor(private fb:FormBuilder, private loginService: LoginService, private router:Router) {  
-    private stateService: LoginService  
-    this.usuario = this.loginService.getNombreUsuario(); 
-    this.FormRestUsuario = this.fb.group({
-    nombre_usuario: [''],
+  constructor(private fb:FormBuilder, private router:Router) { 
+    this.formularioRecuperar = this.fb.group({
+      nombre: ['', Validators.required],
+      contrasena: ['', Validators.required]
 
   })
-
 }
-
+  
   ngOnInit() {
   }
 
-
-
-  RestUsuario() {
-
-    
-    const usuario= {
-      
-      nombre_usuario: this.FormRestUsuario.get('nombre_usuario')?.value,
-
-      
-
-    }
-
-    if (!usuario.nombre_usuario) {
-      
-      this.router.navigate(['/crear-usuario']);
-      
-      return;
-    }
-
-    if (usuario.nombre_usuario == this.FormRestUsuario.get('nombre_usuario')?.value ) {
-    const nombreUsuario = this.FormRestUsuario.get('nombre_usuario')?.value;
-    // Si los campos no están vacíos, puedes proceder con la autenticación o redirección.
-    // Agrega tu lógica de autenticación aquí.
-
-    usuario.nombre_usuario = nombreUsuario;
-      
-      this.loginService.setNombreUsuario(nombreUsuario);
-      this.router.navigate(['']);
-
-    }
-
-
-  }  
+  volveralogin(){
+    this.router.navigate(['/ingreso-usuario'])
+  }
 }

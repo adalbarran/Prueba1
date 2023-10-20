@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../state/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -8,15 +9,17 @@ import { LoginService } from '../state/login.service';
 })
 
 export class InicioPage implements OnInit {
-  nombreUsuario: string;
+  public nombre : string = ''
 
-  constructor(private loginService: LoginService) {
-    this.nombreUsuario = this.loginService.getNombreUsuario(); 
+  constructor(private loginService: LoginService, private router:Router) {
+    this.loginService.getNombre.subscribe((nombre)=> {this.nombre = nombre})
   }
 
   ngOnInit() {
-    // Tu lógica de inicialización aquí
+
   }
-  
+  volverlogin(){
+    this.router.navigate(['/ingreso-usuario'])
+  }
 
 }

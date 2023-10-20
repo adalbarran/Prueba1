@@ -5,15 +5,25 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private nombreUsuario: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  
+  nombre:BehaviorSubject<string> = new BehaviorSubject('')
+  private isLogged:BehaviorSubject<boolean> = 
+  new BehaviorSubject <boolean>(false);
 
-
-  getNombreUsuario() {
-    return this.nombreUsuario.asObservable();
+  get getNombre(){
+    return  this.nombre.asObservable();
   }
 
-  setNombreUsuario(nombreUsuario: string) {
-    this.nombreUsuario.next(nombreUsuario);
+  set setNombre(nombre: string){
+    this.nombre.next(nombre)
+  }
+
+   getIsLogged(){
+    return this.isLogged.asObservable();
+  }
+
+   SetIsLogged(value:boolean){
+     this.isLogged.asObservable();
   }
 
   constructor() { }
