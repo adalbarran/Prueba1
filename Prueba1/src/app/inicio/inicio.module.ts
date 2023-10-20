@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
-import { encabezadoModule } from '../encabezado/encabezado.module';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { encabezadoModule } from '../encabezado/encabezado.module';
     FormsModule,
     IonicModule,
     InicioPageRoutingModule,
-    encabezadoModule
 
   ],
   declarations: [InicioPage]

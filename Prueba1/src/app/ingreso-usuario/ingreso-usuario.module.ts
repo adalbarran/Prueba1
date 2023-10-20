@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { IngresoUsuarioPageRoutingModule } from './ingreso-usuario-routing.module';
-import { encabezadoModule } from '../encabezado/encabezado.module';
 
 import { IngresoUsuarioPage } from './ingreso-usuario.page';
 
@@ -17,10 +16,7 @@ import { alertModule } from '../alert/alert.module';
     IonicModule,
     IngresoUsuarioPageRoutingModule,
     ReactiveFormsModule,
-    encabezadoModule,
     alertModule
-
-
   ],
   declarations: [IngresoUsuarioPage]
 })

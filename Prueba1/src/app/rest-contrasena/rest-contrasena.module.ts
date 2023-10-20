@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { RestContrasenaPageRoutingModule } from './rest-contrasena-routing.module';
 
 import { RestContrasenaPage } from './rest-contrasena.page';
-import { encabezadoModule } from '../encabezado/encabezado.module';
 
 @NgModule({
   imports: [
@@ -16,7 +15,6 @@ import { encabezadoModule } from '../encabezado/encabezado.module';
     IonicModule,
     RestContrasenaPageRoutingModule,
     ReactiveFormsModule,
-    encabezadoModule
   ],
   declarations: [RestContrasenaPage]
 })

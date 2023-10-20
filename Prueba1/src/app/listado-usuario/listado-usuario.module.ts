@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { ListadoUsuarioPageRoutingModule } from './listado-usuario-routing.module';
 
 import { ListadoUsuarioPage } from './listado-usuario.page';
-import { encabezadoModule } from '../encabezado/encabezado.module';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { encabezadoModule } from '../encabezado/encabezado.module';
     FormsModule,
     IonicModule,
     ListadoUsuarioPageRoutingModule,
-    encabezadoModule
   ],
   declarations: [ListadoUsuarioPage]
 })

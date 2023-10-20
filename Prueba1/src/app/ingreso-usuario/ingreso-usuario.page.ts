@@ -54,16 +54,9 @@ export class IngresoUsuarioPage implements OnInit {
 
     console.log(usuario)
     this.loginService.setNombre = usuario.nombre_usuario
-    this.router.navigate(['inicio'])
+    this.router.navigate([''])
     this.FormCrearUsuario.reset();
     this.FormCrearUsuario.reset();
-
-
-
-
-
-
-
 
 
 
@@ -73,5 +66,7 @@ export class IngresoUsuarioPage implements OnInit {
 
 
     }
+
+
 
   }
