@@ -29,3 +29,18 @@ ion-list {
     }
   }
   
+  #welcome.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+
+}

@@ -22,6 +22,9 @@ export class RestContrasenaPage implements OnInit {
   }
 
   volveralogin(){
-    this.router.navigate(['/ingreso-usuario'])
+    this.router.navigate(['/inicio'])
+  }
+  volveraingresousuario(){
+    this.router.navigate([''])
   }
 }

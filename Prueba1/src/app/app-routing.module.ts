@@ -8,11 +8,11 @@ const routes: Routes = [
   },
 
   {
-    path: '',
+    path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'ingreso-usuario',
+    path: '',
     loadChildren: () => import('./ingreso-usuario/ingreso-usuario.module').then( m => m.IngresoUsuarioPageModule)
   },
   {
@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'crear-usuario',
     loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
-  },  {
+  },
+  {
     path: 'detalle',
     loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
   },

@@ -1,31 +1,38 @@
 ion-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center; // Centra horizontalmente
-    justify-content: center; // Centra verticalmente
-    height: 100%; // Ajusta la altura al 100% del contenedor padre
-    
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Centra horizontalmente
+  justify-content: center; // Centra verticalmente
+  height: 100%; // Ajusta la altura al 100% del contenedor padre
   
+}
+
+ion-item {
+  max-width: 300px; // Ancho máximo del ion-item
+  width: 90%; // Ajusta el ancho según tus preferencias
+  margin-bottom: 20px; // Espaciado entre ion-items
+  
+}
+
+ion-input {
+  
+  --ion-label-floating: {
+    font-size: 16px; // Tamaño de fuente de las etiquetas flotantes
+    
+  };
+}
+
+/* Media query para hacer el formulario responsive */
+@media (max-width: 480px) {
   ion-item {
-    max-width: 300px; // Ancho máximo del ion-item
-    width: 90%; // Ajusta el ancho según tus preferencias
-    margin-bottom: 20px; // Espaciado entre ion-items
-    
+    max-width: 90%; // Ajusta el ancho en pantallas pequeñas
   }
-  
-  ion-input {
-    
-    --ion-label-floating: {
-      font-size: 16px; // Tamaño de fuente de las etiquetas flotantes
-      
-    };
-  }
-  
-  /* Media query para hacer el formulario responsive */
-  @media (max-width: 480px) {
-    ion-item {
-      max-width: 90%; // Ajusta el ancho en pantallas pequeñas
-    }
-  }
-  
+}
+
+
+
+
+
+
+
+
