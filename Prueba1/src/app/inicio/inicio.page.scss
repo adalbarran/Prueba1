@@ -33,6 +33,8 @@ ion-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+
   
 }
 
@@ -41,6 +43,14 @@ ion-card {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  image-rendering: auto;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
   
 
+}
+titulo{
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
