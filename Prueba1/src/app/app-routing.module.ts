@@ -4,18 +4,12 @@ import { SeguridadGuard } from './seguridad.guard';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-
-  {
-    path: 'inicio',
-    canActivate:[SeguridadGuard],
-
+    path: '',
+    // canActivate:[SeguridadGuard],
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./ingreso-usuario/ingreso-usuario.module').then( m => m.IngresoUsuarioPageModule)
   },
   {
@@ -31,9 +25,14 @@ const routes: Routes = [
     loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
   },
   {
-    path: 'detalle',
-    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
+    path: 'buscador',
+    loadChildren: () => import('./buscador/buscador.module').then( m => m.BuscadorPageModule)
+  },  {
+    path: 'usuario-buscado',
+    loadChildren: () => import('./usuario-buscado/usuario-buscado.module').then( m => m.UsuarioBuscadoPageModule)
   },
+
+
 
 
 

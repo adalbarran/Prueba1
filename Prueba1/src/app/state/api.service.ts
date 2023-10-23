@@ -8,12 +8,18 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   private BASE_URL = 'https://dummyjson.com';
+  private BASE_URL1 = 'https://dummyjson.com/users';
 
   constructor(
     private http: HttpClient
   ) { }
-
+  
   getApi():Observable<any>{
     return this.http.get(`${this.BASE_URL}/users`);
   }
+
+  getUsuario():Observable<any>{
+    return this.http.get(`${this.BASE_URL1}/search?q=John`);
+  }
+
 }

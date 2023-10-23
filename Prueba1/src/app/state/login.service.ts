@@ -5,11 +5,16 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  
-  nombre:BehaviorSubject<string> = new BehaviorSubject('')
-  private isLogged:BehaviorSubject<boolean> = 
-  new BehaviorSubject <boolean>(false);
 
+  users:BehaviorSubject<any> = new BehaviorSubject(null);
+  user:BehaviorSubject<any> = new BehaviorSubject(null);
+  
+  nombre:BehaviorSubject<string> = new BehaviorSubject('');
+  
+  private isLogged:BehaviorSubject<boolean> = new BehaviorSubject <boolean>(false);
+
+
+  //NOMBRE USUARIO
   get getNombre(){
     return  this.nombre.asObservable();
   }
@@ -18,6 +23,8 @@ export class LoginService {
     this.nombre.next(nombre)
   }
 
+
+  //LOGIN
    getIsLogged(){
     return this.isLogged.asObservable();
   }
@@ -25,6 +32,15 @@ export class LoginService {
    SetIsLogged(value:boolean){
      this.isLogged.asObservable();
   }
+
+  //API
+  public obtenerUsers(){
+    return this.users.asObservable();
+  }
+
+  public usersValues(users:any){
+    this.users.next(users)
+  }  
 
   constructor() { }
 }

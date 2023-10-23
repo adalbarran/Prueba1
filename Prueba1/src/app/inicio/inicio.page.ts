@@ -12,7 +12,8 @@ import { ApiService } from '../state/api.service';
 export class InicioPage implements OnInit {
   public nombre : string = '';
 
-  public users: any;
+  public usuarios: any;
+  public datos: any;
 
   constructor(private loginService: LoginService, private router:Router, private api: ApiService) {
     this.loginService.getNombre.subscribe((nombre)=> {this.nombre = nombre})
@@ -21,16 +22,10 @@ export class InicioPage implements OnInit {
   ngOnInit(): void {
     this.api.getApi().subscribe((data)=>{
       console.log('Informacion del punto de encuentro', data);
-      this.users = data;
-      localStorage.setItem('users', JSON.stringify(data.result));
+      this.usuarios = data;
+      localStorage.setItem('usuarios', JSON.stringify(data.result));
     }
     )
-  }
-
-  detalle(users:any){
-    console.log('Usuarios =>', users);
-    this.router.navigateByUrl('/detalle');
-    localStorage.setItem('user', JSON.stringify(users));
   }
 
   volverlogin(){

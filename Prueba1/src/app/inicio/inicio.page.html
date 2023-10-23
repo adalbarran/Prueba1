@@ -10,10 +10,9 @@
 
 
 <ion-content [fullscreen]="true">
-
   
   <ion-menu contentId="main-content">
-    <ion-header>
+    <ion-header>  
       <ion-toolbar>
         <ion-title>Menu Content</ion-title>
       </ion-toolbar>
@@ -24,6 +23,7 @@
           <ion-item>
             <ion-label>
               <ion-button expand="block" routerLink = ""> Iniciar Sesion </ion-button>
+              <ion-button expand="block" routerLink="/buscador" >Buscador</ion-button>
             </ion-label>
           </ion-item>
         </ion-list>
@@ -32,32 +32,27 @@
   </ion-menu>
   
   <div class="ion-page" id="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-menu-button name="apps-outline"></ion-menu-button>
-        </ion-buttons>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <h1 id="welcome" class="titulo"> <strong>Bienvenido {{ nombre }}</strong></h1> 
-      <div *ngFor="let user of users?.results">
-        <h1>{{user?.username}}</h1>
-        <ion-button type="submit" (click)="detalle(user)"> Ver </ion-button>
-      </div>
-      <ion-card>
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-header>
-          <ion-card-title>Card Title</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-    
-        </ion-card-content>
-      </ion-card>
-    </ion-content>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button name="apps-outline"></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <h1 id="welcome" class="titulo"> <strong>Bienvenido {{ nombre }}</strong></h1> 
+        <ion-card>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  
+          </ion-card-header>
+          <ion-card-content>
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
   </div>
 
 
