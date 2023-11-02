@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { BuscadorPageRoutingModule } from './buscador-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BuscadorPage } from './buscador.page';
 import { ApiService } from '../state/api.service';
@@ -14,7 +15,8 @@ import { ApiService } from '../state/api.service';
     CommonModule,
     FormsModule,
     IonicModule,
-    BuscadorPageRoutingModule
+    BuscadorPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [BuscadorPage],
   providers: [ApiService]
