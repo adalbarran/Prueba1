@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import{ LoginService} from '../state/login.service';
 
@@ -18,20 +18,13 @@ export class IngresoUsuarioPage implements OnInit {
 
   FormCrearUsuario:FormGroup;
 
-  usuariooo : Usuarios[] = [
-    {
-      nombre_usuario: '',
-      contrasena: ''
-    },
 
-  ]
-  
 
   constructor(private fb:FormBuilder, private router:Router, private loginService: LoginService) {
     this.FormCrearUsuario = this.fb.group({
-      nombre_usuario: [''],
-      contrasena: ['']
-    })
+      nombre: ['', Validators.required],
+      contrasena: ['', Validators.required]
+    });
     
    }
 
@@ -45,27 +38,22 @@ export class IngresoUsuarioPage implements OnInit {
     
     const usuario= {
       
-      nombre_usuario: this.FormCrearUsuario.get('nombre_usuario')?.value,
+      nombre: this.FormCrearUsuario.get('nombre')?.value,
       contrasena: this.FormCrearUsuario.get('contrasena')?.value,
 
       
 
     }
 
+
     console.log(usuario)
-    this.loginService.setNombre = usuario.nombre_usuario
+    this.loginService.setNombre = usuario.nombre
     this.router.navigate(['/inicio'])
-    this.FormCrearUsuario.reset();
-    this.FormCrearUsuario.reset();
 
 
 
 
-
-
-
-
-    }
+}
 
 
 

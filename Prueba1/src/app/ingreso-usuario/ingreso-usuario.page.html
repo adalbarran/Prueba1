@@ -28,16 +28,16 @@
   </div>
 
   <ion-list>
-  <form [formGroup] = 'FormCrearUsuario'>
+  <form [formGroup] = 'FormCrearUsuario' (ngSubmit)="crearUsuario()">
 
     <ion-item>
-      <ion-input formControlName="nombre_usuario" label="Nombre de usuario " labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
+      <ion-input formControlName="nombre" label="Nombre de usuario " labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
     </ion-item>
       
     <ion-item>
       <ion-input formControlName="contrasena" type="password"  required=true label="Contraseña"  labelPlacement="floating" placeholder="···"></ion-input>
     </ion-item>
-    <ion-button  (click)="crearUsuario()" routerLink="" expand="block"  id = "present-alert"> Iniciar Sesion </ion-button>
+    <ion-button  type="submit" [disabled]="!FormCrearUsuario.valid" expand="block"  id = "present-alert"> Iniciar Sesion </ion-button>
     <ion-button expand="block" routerLink = "/rest"> Restablecer Contraseña </ion-button>
 
 

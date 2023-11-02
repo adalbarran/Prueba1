@@ -4,12 +4,12 @@ import { SeguridadGuard } from './seguridad.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'inicio',
     // canActivate:[SeguridadGuard],
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./ingreso-usuario/ingreso-usuario.module').then( m => m.IngresoUsuarioPageModule)
   },
   {
@@ -27,7 +27,8 @@ const routes: Routes = [
   {
     path: 'buscador',
     loadChildren: () => import('./buscador/buscador.module').then( m => m.BuscadorPageModule)
-  },  {
+  },
+  {
     path: 'usuario-buscado',
     loadChildren: () => import('./usuario-buscado/usuario-buscado.module').then( m => m.UsuarioBuscadoPageModule)
   },
