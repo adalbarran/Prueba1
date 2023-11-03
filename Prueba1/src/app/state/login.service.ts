@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,5 +36,11 @@ export class LoginService {
 
   constructor() { }
 
+  userIsLogged(): Observable<boolean> {
+    return this.isLoggedSubject.asObservable();
+  }
 
+  setUserIsLogged(isLogged: boolean): void {
+    this.isLoggedSubject.next(isLogged);
+  }
 }

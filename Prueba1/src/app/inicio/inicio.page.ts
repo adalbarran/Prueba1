@@ -19,11 +19,11 @@ export class InicioPage implements OnInit {
     this.loginService.getNombre.subscribe((nombre)=> {this.nombre = nombre})
   } 
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.api.getApi().subscribe((data)=>{
       console.log('Informacion del punto de encuentro', data);
       this.usuarios = data;
-      localStorage.setItem('usuarios', JSON.stringify(data.result));
+      localStorage.setItem('users', JSON.stringify(data.users));
     }
     )
   }

@@ -9,7 +9,7 @@
 
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="background-image">
   
   <ion-menu contentId="main-content">
     <ion-header>  
@@ -53,6 +53,29 @@
           <ion-card-content>
           </ion-card-content>
         </ion-card>
+
+
+      <div *ngFor="let usuarios of usuarios?.users">
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title> Usuario registrado </ion-card-title>
+            <ion-card-subtitle>  {{usuarios?.firstName}} {{usuarios?.lastName}} {{usuarios?.maidenName}} </ion-card-subtitle>
+
+            <ion-card-title> Contraseña </ion-card-title>
+            <ion-card-subtitle>  {{usuarios?.password}}  </ion-card-subtitle>
+
+          </ion-card-header>
+        
+          <ion-card-content>
+            <img src = "{{usuarios?.image}}"/>
+          </ion-card-content>
+        </ion-card>
+
+
+      </div>
+
+
       </ion-content>
   </div>
 

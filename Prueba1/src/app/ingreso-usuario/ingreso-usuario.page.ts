@@ -48,8 +48,9 @@ export class IngresoUsuarioPage implements OnInit {
 
     console.log(usuario)
     this.loginService.setNombre = usuario.nombre
+    this.loginService.setUserIsLogged(true);
     this.router.navigate(['/inicio'])
-
+    
 
 
 

@@ -5,7 +5,7 @@ import { SeguridadGuard } from './seguridad.guard';
 const routes: Routes = [
   {
     path: 'inicio',
-    // canActivate:[SeguridadGuard],
+    canActivate:[SeguridadGuard],
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
@@ -14,22 +14,18 @@ const routes: Routes = [
   },
   {
     path: 'rest',
+    canActivate:[SeguridadGuard],
     loadChildren: () => import('./rest-contrasena/rest-contrasena.module').then( m => m.RestContrasenaPageModule)
   },
-  {
-    path: 'listado-usuario',
-    loadChildren: () => import('./listado-usuario/listado-usuario.module').then( m => m.ListadoUsuarioPageModule)
-  },
-  {
-    path: 'crear-usuario',
-    loadChildren: () => import('./crear-usuario/crear-usuario.module').then( m => m.CrearUsuarioPageModule)
-  },
+
   {
     path: 'buscador',
+    canActivate:[SeguridadGuard],
     loadChildren: () => import('./buscador/buscador.module').then( m => m.BuscadorPageModule)
   },
   {
     path: 'usuario-buscado',
+    canActivate:[SeguridadGuard],
     loadChildren: () => import('./usuario-buscado/usuario-buscado.module').then( m => m.UsuarioBuscadoPageModule)
   },
 
