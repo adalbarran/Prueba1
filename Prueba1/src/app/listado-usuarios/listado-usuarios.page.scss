@@ -1,0 +1,96 @@
+
+.background-image {
+    background-image: url('https://c.wallhere.com/photos/c2/12/auto_wet_car_weather_sport_night_photoshop_neon-981540.jpg!d'); /* Reemplaza 'URL_DE_TU_IMAGEN' con la URL de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenido */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+     /* Opcional: fija la imagen de fondo */
+  }
+  
+  
+  
+  ion-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center; // Centra horizontalmente
+      justify-content: center; // Centra verticalmente
+      height: 100%; // Ajusta la altura al 100% del contenedor padre
+      
+    }
+    
+    ion-item {
+      max-width: 300px; // Ancho máximo del ion-item
+      width: 100%; // Ajusta el ancho según tus preferencias
+      margin-bottom: 20px; // Espaciado entre ion-items
+      
+    }
+    ion-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 400px; // Ajusta el ancho máximo según tus necesidades
+      margin: 0 auto; // Centra horizontalmente
+    
+      ion-card-header {
+        ion-card-title, ion-card-subtitle {
+          font-size: 14px; // Tamaño de fuente más pequeño
+          margin: 0; // Elimina márgenes
+        }
+      }
+    
+      ion-card-content {
+        img {
+          max-width: 100%; // Ajusta el ancho de la imagen al 100%
+          height: auto; // Mantén la proporción
+        }
+      }
+    }
+    
+    
+    
+    
+    
+    
+      
+    ion-input {
+      
+      --ion-label-floating: {
+        font-size: 16px; // Tamaño de fuente de las etiquetas flotantes
+        
+      };
+    }
+    
+    /* Media query para hacer el formulario responsive */
+    @media (max-width: 480px) {
+      ion-item {
+        max-width: 90%; // Ajusta el ancho en pantallas pequeñas
+      }
+    }
+    
+    #welcome.titulo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Times New Roman', Times, serif;
+  
+    
+  }
+  
+  ion-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    image-rendering: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    
+  
+  }
+  titulo{
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     
+  }
+  

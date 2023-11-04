@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title> Listado usuarios </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">listado_usuarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngFor="let usuarios of usuarios?.users">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> Usuario registrado </ion-card-title>
+        <ion-card-subtitle>  {{usuarios?.firstName}} {{usuarios?.lastName}} {{usuarios?.maidenName}} </ion-card-subtitle>
+
+        <ion-card-title> Contraseña </ion-card-title>
+        <ion-card-subtitle>  {{usuarios?.password}}  </ion-card-subtitle>
+
+      </ion-card-header>
+
+      <ion-card-content>
+        <img src = "{{usuarios?.image}}"/>
+        <ion-button (click)="irdetalle(usuarios)"> Ver Detalle </ion-button>
+
+        <ion-button (click)="irinicio()"> Volver </ion-button>
+
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+
+
+</ion-content>

@@ -14,7 +14,6 @@ const routes: Routes = [
   },
   {
     path: 'rest',
-    canActivate:[SeguridadGuard],
     loadChildren: () => import('./rest-contrasena/rest-contrasena.module').then( m => m.RestContrasenaPageModule)
   },
 
@@ -28,6 +27,16 @@ const routes: Routes = [
     canActivate:[SeguridadGuard],
     loadChildren: () => import('./usuario-buscado/usuario-buscado.module').then( m => m.UsuarioBuscadoPageModule)
   },
+  {
+    path: 'listado-usuarios',
+    canActivate:[SeguridadGuard],
+    loadChildren: () => import('./listado-usuarios/listado-usuarios.module').then( m => m.ListadoUsuariosPageModule)
+  },  {
+    path: 'detalle-usuario',
+    loadChildren: () => import('./detalle-usuario/detalle-usuario.module').then( m => m.DetalleUsuarioPageModule)
+  },
+
+
 
 
 

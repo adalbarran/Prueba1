@@ -32,4 +32,9 @@ export class InicioPage implements OnInit {
     this.router.navigate(['/ingreso-usuario'])
   }
 
+  irlistado(){
+    this.router.navigate(['/listado-usuarios'])
+
+  }
+
 }
