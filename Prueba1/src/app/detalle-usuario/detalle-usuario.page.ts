@@ -13,12 +13,13 @@ export class DetalleUsuarioPage implements OnInit {
 
   ngOnInit() {
 
-    const usuario = localStorage.getItem('User');
-    if (usuario == null){
+    const usuarios = localStorage.getItem('user');
+    if (usuarios == null){
 
     } 
     else{
-      this.usuario = JSON.parse(usuario);
+      debugger
+      this.usuario = JSON.parse(usuarios);
 
     }
 

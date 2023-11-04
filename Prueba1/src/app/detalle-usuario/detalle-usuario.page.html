@@ -10,6 +10,34 @@
       <ion-title size="large">detalle_usuario</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-card-title> Usuario registrado </ion-card-title>
+      <ion-card-subtitle>  {{usuario?.firstName}} </ion-card-subtitle>
+
+      <ion-card-title> Contraseña </ion-card-title>
+      <ion-card-subtitle>  {{usuario?.password}}  </ion-card-subtitle>
+
+    </ion-card-header>
+
+    <ion-card-content>
+      
+      <img src = "{{usuario?.image}}"/>
+
+      <ion-button> Volver </ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+
+
 </ion-content>
 
 <ion-footer>

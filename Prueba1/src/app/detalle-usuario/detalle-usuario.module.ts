@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { DetalleUsuarioPageRoutingModule } from './detalle-usuario-routing.module';
 
 import { DetalleUsuarioPage } from './detalle-usuario.page';
-import { ApiService } from '../state/api.service';
 
 @NgModule({
   imports: [

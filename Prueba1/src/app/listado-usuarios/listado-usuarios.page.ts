@@ -26,7 +26,7 @@ export class ListadoUsuariosPage implements OnInit {
 
   irdetalle( usuarios : any){
     console.log('Usuario Seleccionado', usuarios)
-    localStorage.setItem('Users', JSON.stringify(usuarios))
+    localStorage.setItem('users', JSON.stringify(usuarios))
 
     this.router.navigateByUrl('/detalle-usuario');  
   }
