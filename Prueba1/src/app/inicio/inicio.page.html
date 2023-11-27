@@ -1,15 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="main-content" >
   <ion-toolbar color="primary">
     <ion-title> Inicio </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 
 
 
+<img  src="https://png.pngtree.com/background/20231030/original/pngtree-abstract-geometric-background-in-black-a-fresh-design-for-websites-presentations-picture-image_5784223.jpg">
 
 
-<ion-content [fullscreen]="true" class="background-image">
+
+<ion-content [fullscreen]="true" class="ion-content"  >
   
   <ion-menu contentId="main-content">
     <ion-header>  
@@ -17,7 +20,7 @@
         <ion-title>Menu Content</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content class="ion-padding">
+    <ion-content class="ion-padding" >
       <ion-content color="light">
         <ion-list [inset]="true">
           <ion-item>
@@ -42,16 +45,16 @@
       </ion-header>
       <ion-content class="ion-padding">
         <h1 id="welcome" class="titulo"> <strong>Bienvenido {{ nombre }} !</strong></h1> 
-        <ion-card>
-          <img alt="Silhouette of mountains" src="https://static.vecteezy.com/system/resources/previews/001/958/818/non_2x/one-line-drawing-of-car-sedan-vehicle-illustration-minimalism-vector.jpg" />
+        <ion-card class="ion-card">
+          <img alt="Silhouette of mountains" src="https://static.vecteezy.com/system/resources/thumbnails/005/184/881/small/car-symbol-logo-template-stylized-silhouette-vector.jpg" />
           <ion-card-header>
-            <ion-card-title>Te llevo <ion-icon name="accessibility-outline"></ion-icon> <ion-icon name="car-outline"></ion-icon> </ion-card-title>
+            <ion-card-title class="ion-card">Te llevo <ion-icon name="accessibility-outline"></ion-icon> <ion-icon name="car-outline"></ion-icon> </ion-card-title>
             
-            <ion-card-subtitle>Viaja Seguro</ion-card-subtitle>
+            <ion-card-subtitle class="ion-card">Viaja Seguro</ion-card-subtitle>
             
           </ion-card-header>
           <ion-card-content>
-            <ion-button (click)="irlistado()"> Ir a listado de usuarios </ion-button>
+            <ion-button class="ion-card" (click)="irlistado()"> Ir a listado de usuarios </ion-button>
           </ion-card-content>
         </ion-card>
 
@@ -62,6 +65,8 @@
 
 </ion-content>
 
+
+
 <ion-footer>
 
   <ion-toolbar color="primary">
@@ -71,4 +76,5 @@
   </ion-toolbar>
 
 </ion-footer>
+
 
