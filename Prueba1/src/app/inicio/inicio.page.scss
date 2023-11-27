@@ -7,12 +7,7 @@ background-image {
  
 }
 
-ion-content{
 
-  --background: url(/Prueba1/Fondo.jpg)no-repeat center/cover fixed;
-
-
-}
 
 
 
@@ -45,7 +40,7 @@ ion-list {
       ion-card-title, ion-card-subtitle {
         font-size: 14px; // Tamaño de fuente más pequeño
         margin: 0; // Elimina márgenes
-        color: black;
+        color: rgb(179, 176, 176);
       }
     }
   

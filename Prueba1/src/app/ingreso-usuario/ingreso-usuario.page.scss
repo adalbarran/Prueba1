@@ -4,7 +4,6 @@ ion-list {
     align-items: center; // Centra horizontalmente
     justify-content: center; // Centra verticalmente
     height: 100%; // Ajusta la altura al 100% del contenedor padre
-    background: url(/Prueba1/src/app/img/Fondo.jpg);
     
   }
   
@@ -31,10 +30,3 @@ ion-list {
   }
 
 
-
-  ion-content{
-
-    background-image: url(/Prueba1/src/app/img/Fondo.jpg);
-  
-  
-  }

@@ -1,7 +1,9 @@
 <ion-header [translucent]="true" class="main-content" >
   <ion-toolbar color="primary">
-    <ion-title> Inicio </ion-title>
-    
+    <ion-title> Inicio 
+      
+    </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
@@ -26,13 +28,14 @@
           <ion-item>
             <ion-label>
               <ion-button expand="block" routerLink = "/login"> Iniciar Sesion </ion-button>
-              <ion-button expand="block" routerLink = "/buscador" >Buscador</ion-button>
+              <ion-button expand="block" (click)="cerrar()">Cerrar sesión</ion-button>
             </ion-label>
           </ion-item>
         </ion-list>
       </ion-content>
     </ion-content>
   </ion-menu>
+  
   
   <div class="ion-page" id="main-content">
       <ion-header>
