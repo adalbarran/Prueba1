@@ -1,82 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>Inicio Sesion </ion-title>
+    <ion-title>Inicio Sesion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content [fullscreen]="true" class="ion-content">
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
-  </ion-menu>
-  
-  <h1 class="page-title"> TeLlevoApp</h1>
 
-  <ion-card >
-    <img alt="Silhouette of mountains" src="https://w7.pngwing.com/pngs/181/68/png-transparent-luxury-car-silhouette-thumbnail.png"   style="background-color: transparent"
-    />
+  <h1 class="page-title">TeLlevoApp</h1>
 
-  
+  <ion-card class="login-card">
+    <img alt="Silhouette of mountains" src="https://w7.pngwing.com/pngs/181/68/png-transparent-luxury-car-silhouette-thumbnail.png" />
+
     <ion-card-content>
       <ion-list>
 
-        <!-- <form [formGroup] = 'FormCrearUsuario' (ngSubmit)="crearUsuario()">
-      
-          <ion-item>
-            <ion-input formControlName="nombre" label="Nombre de usuario " labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class = "login-form ">
+
+          <ion-item style="background-color: black;">
+            <ion-input formControlName="nombre" label="Nombre de usuario" labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
           </ion-item>
-            
+
           <ion-item>
-            <ion-input formControlName="contrasena" type="password"  required=true label="Contraseña"  labelPlacement="floating" placeholder="···"></ion-input>
+            <ion-input formControlName="password" type="password" required=true label="Contraseña" labelPlacement="floating" placeholder="···"></ion-input>
           </ion-item>
-          <ion-button  type="submit" [disabled]="!FormCrearUsuario.valid" expand="block"  id = "present-alert"> Iniciar Sesion </ion-button>
-          <ion-button expand="block" routerLink = "/rest"> Restablecer Contraseña </ion-button>
+
+          <ion-button type="submit" [disabled]="!loginForm.valid" expand="block" id="present-alert">Iniciar Sesion</ion-button>
+          <ion-button expand="block" routerLink="/rest">Restablecer Contraseña</ion-button>
+
           <ion-item>
-          <p>No tiene cuenta? </p> <a routerLink = "/registro"> Registrarse </a>
+            <p>No tiene cuenta?</p>
+            <a routerLink="/registro">Registrarse</a>
           </ion-item>
-      
-        </form> -->
-      
-          <form [formGroup] = 'loginForm' (ngSubmit)="login()">
-      
-          <ion-item>
-            <ion-input formControlName="nombre" label="Nombre de usuario " labelPlacement="floating" placeholder="Ej. Fernado123"></ion-input>
-          </ion-item>
-            
-          <ion-item>
-            <ion-input formControlName="password" type="password"  required=true label="Contraseña"  labelPlacement="floating" placeholder="···"></ion-input>
-          </ion-item>
-          <ion-button  type="submit" [disabled]="!loginForm.valid" expand="block"  id = "present-alert"> Iniciar Sesion </ion-button>
-          <ion-button expand="block" routerLink = "/rest"> Restablecer Contraseña </ion-button>
-          <ion-item>
-          <p>No tiene cuenta? </p> <a routerLink = "/registro"> Registrarse </a>
-          </ion-item>
-      
+
         </form>
-      
-        </ion-list>
+
+      </ion-list>
     </ion-card-content>
   </ion-card>
-
-
-
-
-
 
 </ion-content>
 
 <ion-footer>
-
   <ion-toolbar color="primary">
-    <ion-title >
-      <h6> © Derechos Reservados </h6>
+    <ion-title>
+      <h6>© Derechos Reservados</h6>
     </ion-title>
   </ion-toolbar>
-
 </ion-footer>

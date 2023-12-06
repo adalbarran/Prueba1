@@ -8,6 +8,7 @@ ion-list {
   }
 
   .page-title {
+    color: #070606;
     text-align: center;
     margin-bottom: -120px;
     margin-top: 20px; /* Reducido el margen inferior para acercar el título a la tarjeta */
@@ -105,4 +106,52 @@ ion-list {
       max-width: none;
     }
   }
+
+  ion-content {
+    margin: 0;
+    padding: 0;
+    --background: url('https://images.unsplash.com/photo-1545179605-1296651e9d43') center center / cover no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  
+    @media (max-width: 768px) {
+      background-position: top;
+    }
+  }
+  
+  .login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  
+  .login-form {
+    // Estilos del formulario
+    color: red;
+    
+  }
+  
+
   
