@@ -9,6 +9,7 @@ import { IngresoUsuarioPageRoutingModule } from './ingreso-usuario-routing.modul
 import { IngresoUsuarioPage } from './ingreso-usuario.page';
 
 import { alertModule } from '../alert/alert.module';
+import { RegistroService } from '../state/registro.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +19,8 @@ import { alertModule } from '../alert/alert.module';
     ReactiveFormsModule,
     alertModule
   ],
-  declarations: [IngresoUsuarioPage]
+  declarations: [IngresoUsuarioPage],
+  providers: [RegistroService]
+
 })
 export class IngresoUsuarioPageModule {}

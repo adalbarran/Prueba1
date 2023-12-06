@@ -5,7 +5,7 @@ import { SeguridadGuard } from './seguridad.guard';
 const routes: Routes = [
   {
     path: 'inicio',
-    canActivate:[SeguridadGuard],
+    // canActivate:[SeguridadGuard],
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
@@ -21,13 +21,19 @@ const routes: Routes = [
 
   {
     path: 'listado-usuarios',
-    canActivate:[SeguridadGuard],
     loadChildren: () => import('./listado-usuarios/listado-usuarios.module').then( m => m.ListadoUsuariosPageModule)
   },
   {
     path: 'detalle-usuario',
     loadChildren: () => import('./detalle-usuario/detalle-usuario.module').then( m => m.DetalleUsuarioPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+
+
+
 
 
 
