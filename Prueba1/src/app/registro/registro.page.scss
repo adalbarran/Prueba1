@@ -1,0 +1,108 @@
+ion-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra horizontalmente
+    justify-content: center; // Centra verticalmente
+    height: 100%; // Ajusta la altura al 100% del contenedor padre
+    
+  }
+
+  .page-title {
+    text-align: center;
+    margin-bottom: -120px;
+    margin-top: 20px; /* Reducido el margen inferior para acercar el título a la tarjeta */
+  }
+
+
+
+  
+  ion-item {
+    max-width: 300px; // Ancho máximo del ion-item
+    width: 90%; // Ajusta el ancho según tus preferencias
+    margin-bottom: 20px; // Espaciado entre ion-items
+    
+  }
+  
+  ion-input {
+    
+    --ion-label-floating: {
+      font-size: 16px; // Tamaño de fuente de las etiquetas flotantes
+      
+    };
+  }
+  
+  /* Media query para hacer el formulario responsive */
+  @media (max-width: 480px) {
+    ion-item {
+      max-width: 90%; // Ajusta el ancho en pantallas pequeñas
+    }
+  }
+
+
+  ion-card {
+    width: 90%;  // Puedes ajustar el ancho según tus necesidades
+    max-width: 400px;  // Ajusta el ancho máximo según tus necesidades
+    margin: auto;  // Centra la tarjeta horizontalmente
+    margin-top: 10px;
+      // Agrega espacio en la parte superior según tus necesidades
+  }
+  
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  // Centra el contenido de la tarjeta verticalmente
+  }
+  
+  ion-input {
+    width: 100%;
+    max-width: 300px;  // Ajusta el ancho máximo según tus necesidades
+    margin-bottom: 15px;  // Agrega espacio entre los elementos según tus necesidades
+  }
+  
+  ion-button {
+    width: 100%;
+    max-width: 300px;  // Ajusta el ancho máximo según tus necesidades
+    margin-top: 15px;  // Agrega espacio entre los elementos según tus necesidades
+  }
+  
+  @media (max-width: 576px) {
+    ion-card {
+      width: 100%;  // Hacer la tarjeta ocupar el ancho completo en dispositivos pequeños
+      max-width: none;  // Eliminar el ancho máximo en dispositivos pequeños
+    }
+  }
+  
+  ion-card {
+    width: 80%; // Ajusta el ancho según tus necesidades
+    max-width: 300px; // Ajusta el ancho máximo según tus necesidades
+    margin: auto;
+    margin-top: 50vh; // Centra la tarjeta verticalmente usando la mitad de la altura visible
+    transform: translateY(-50%); // Ajusta la posición vertical para centrar exactamente
+    margin-bottom: -400px;
+  }
+  
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ion-input {
+    width: 100%;
+    max-width: 250px; // Ajusta el ancho máximo según tus necesidades
+    margin-bottom: 15px;
+  }
+  
+  ion-button {
+    width: 100%;
+    max-width: 250px; // Ajusta el ancho máximo según tus necesidades
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 576px) {
+    ion-card {
+      width: 90%; // Ajusta el ancho en dispositivos pequeños
+      max-width: none;
+    }
+  }
+  
