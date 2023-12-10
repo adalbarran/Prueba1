@@ -10,31 +10,27 @@
 
 
 
-<img  src="https://png.pngtree.com/background/20231030/original/pngtree-abstract-geometric-background-in-black-a-fresh-design-for-websites-presentations-picture-image_5784223.jpg">
+
 
 
 
 <ion-content [fullscreen]="true" class="ion-content"  >
   
-  <ion-menu contentId="main-content">
-    <ion-header>  
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding" >
-      <ion-content color="light">
-        <ion-list [inset]="true">
-          <ion-item>
-            <ion-label>
-              <ion-button expand="block" routerLink = "/login"> Iniciar Sesion </ion-button>
-              <ion-button expand="block" (click)="cerrar()">Cerrar sesión</ion-button>
-            </ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-content>
-  </ion-menu>
+  <img  src="https://png.pngtree.com/background/20231030/original/pngtree-abstract-geometric-background-in-black-a-fresh-design-for-websites-presentations-picture-image_5784223.jpg">
+
+ 
+
+
+  <ion-fab slot="fixed" vertical="fixed" horizontal="end" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="apps-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button>
+        <ion-icon name="log-out-outline" (click)="cerrar()">Cerrar sesión</ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
   
   
   <div class="ion-page" id="main-content">
