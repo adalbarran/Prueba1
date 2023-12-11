@@ -18,10 +18,19 @@ export class InicioPage implements OnInit {
   public usuarios: any;
   public datos: any;
 
+  
+
   constructor(private loginService: LoginService, private router:Router, private api: ApiService, public navCtrl: NavController,
     public alertController : AlertController) {
     this.loginService.getNombre.subscribe((nombre)=> {this.nombre = nombre})
   } 
+
+  isAlertOpen = false;
+  alertButtons = ['OK'];
+
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
+  }
 
   ngOnInit() {
     this.api.getApi().subscribe((data)=>{
@@ -41,6 +50,7 @@ export class InicioPage implements OnInit {
 
   }
 
+  
   async cerrar() {
     const alert = await this.alertController.create({
       header: 'Cerrar Sesion?',

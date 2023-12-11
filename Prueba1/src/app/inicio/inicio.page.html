@@ -64,7 +64,14 @@
             
           </ion-card-header>
           <ion-card-content>
-            <ion-button class="ion-card" (click)="irlistado()"> Se un conductor </ion-button>
+            <ion-button (click)="setOpen(true)">Se un conductor</ion-button>
+            <ion-alert
+              [isOpen]="isAlertOpen"
+              header="PROXIMAMENTE"
+              message="incluido en la version final"
+              [buttons]="alertButtons"
+              (didDismiss)="setOpen(false)"
+            ></ion-alert>
           </ion-card-content>
         </ion-card>
 
@@ -77,7 +84,15 @@
             
           </ion-card-header>
           <ion-card-content>
-            <ion-button class="ion-card" (click)="irlistado()"> Buscar Rutas </ion-button>
+            <ion-button (click)="setOpen(true)">Buscar Rutas</ion-button>
+            <ion-alert
+              [isOpen]="isAlertOpen"
+              header="PROXIMAMENTE"
+              message="incluido en la version final"
+              [buttons]="alertButtons"
+              (didDismiss)="setOpen(false)"
+            ></ion-alert>
+            
           </ion-card-content>
         </ion-card>
 
