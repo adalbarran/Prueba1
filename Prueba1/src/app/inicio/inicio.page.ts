@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { ApiService } from '../state/api.service';
 import { AlertController, NavController } from '@ionic/angular';
 
+
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',

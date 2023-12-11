@@ -1,22 +1,15 @@
 
-background-image {
-  background: url(/Prueba1/Fondo.jpg);
-  background-image: url(/Prueba1/src/app/img/Fondo.jpg);
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenido */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
- 
-}
-
 
 
 
 
 ion-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; // Centra horizontalmente
     justify-content: center; // Centra verticalmente
     height: 100%; // Ajusta la altura al 100% del contenedor padre
+    width: 500px;
     
   }
   
@@ -24,17 +17,21 @@ ion-list {
     max-width: 300px; // Ancho máximo del ion-item
     width: 100%; // Ajusta el ancho según tus preferencias
     margin-bottom: 20px; // Espaciado entre ion-items
+    flex-direction: row;
     
   }
   ion-card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    max-width: 400px; // Ajusta el ancho máximo según tus necesidades
-    margin: 0 auto; // Centra horizontalmente
+    flex-direction: row;
+    justify-content:space-around ;
+    align-content: space-around;
+    max-width: 600px; // Ajusta el ancho máximo según tus necesidades
+    height: 300;
+    margin: 0; // Centra horizontalmente
     color: black;
+    flex-wrap: wrap;
+
+    
   
     ion-card-header {
       ion-card-title, ion-card-subtitle {
@@ -47,7 +44,9 @@ ion-list {
     ion-card-content {
       img {
         max-width: 100%; // Ajusta el ancho de la imagen al 100%
-        height: auto; // Mantén la proporción
+        height: 300; // Mantén la proporción
+        align-content: space-between;
+        align-items: normal;
       }
     }
   }
@@ -85,10 +84,11 @@ ion-list {
 
 ion-card {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
   image-rendering: auto;
+  margin: 0 auto; // Centra horizontalmente
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
   color: ghostwhite;
@@ -99,4 +99,52 @@ titulo{
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
+}
+
+ion-padding{
+
+  width: 500px;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex;
+  -webkit-flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+
+
+ion-content{
+
+  ion-content {
+    margin: 0;
+    padding: 0;
+    --background: url('https://images.unsplash.com/photo-1545179605-1296651e9d43') center center / cover no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: normal;
+    align-content: space-around;
+    flex-wrap: wrap;
+  
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  
+    @media (max-width: 768px) {
+      background-position: top;
+    }
+  }
 }

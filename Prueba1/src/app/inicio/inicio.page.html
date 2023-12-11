@@ -14,9 +14,7 @@
 
 
 
-<ion-content [fullscreen]="true" class="ion-content"  >
-  
-  <img  src="https://png.pngtree.com/background/20231030/original/pngtree-abstract-geometric-background-in-black-a-fresh-design-for-websites-presentations-picture-image_5784223.jpg">
+<ion-content [fullscreen]="true" class="ion-content" style="background-color: black;" >
 
  
 
@@ -42,7 +40,7 @@
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content class="ion-padding">
+      <ion-content class="ion-padding" >
         <h1 id="welcome" class="titulo"> <strong>Bienvenido {{ nombre }} !</strong></h1> 
         <ion-card class="ion-card">
           <img alt="Silhouette of mountains" src="https://static.vecteezy.com/system/resources/thumbnails/005/184/881/small/car-symbol-logo-template-stylized-silhouette-vector.jpg" />
@@ -57,6 +55,35 @@
           </ion-card-content>
         </ion-card>
 
+        <ion-card class="ion-card">
+          <img alt="Silhouette of mountains" src="https://tripp.cl/modules/ph_simpleblog/covers/8.jpg" />
+          <ion-card-header>
+            <ion-card-title class="ion-card">Te llevo <ion-icon name="accessibility-outline"></ion-icon> <ion-icon name="car-outline"></ion-icon> </ion-card-title>
+            
+            <ion-card-subtitle class="ion-card">Viaja Seguro</ion-card-subtitle>
+            
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button class="ion-card" (click)="irlistado()"> Se un conductor </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card class="ion-card">
+          <img alt="Silhouette of mountains" src= "https://img.freepik.com/vector-premium/icono-ubicacion-telefono-inteligente-vector-isometrico-aplicacion-mapa-telefono-ruta-pantalla-gps_96318-68150.jpg" />
+          <ion-card-header>
+            <ion-card-title class="ion-card">Te llevo <ion-icon name="accessibility-outline"></ion-icon> <ion-icon name="car-outline"></ion-icon> </ion-card-title>
+            
+            <ion-card-subtitle class="ion-card">Viaja Seguro</ion-card-subtitle>
+            
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button class="ion-card" (click)="irlistado()"> Buscar Rutas </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+
+
+        
       </ion-content>
   </div>
 
