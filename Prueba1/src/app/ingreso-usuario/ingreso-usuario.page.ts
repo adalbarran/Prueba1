@@ -18,19 +18,14 @@ interface Usuarios {
 })
 export class IngresoUsuarioPage implements OnInit {
 
-  FormCrearUsuario:FormGroup;
 
   loginForm: FormGroup;
 
 
   constructor(private fb:FormBuilder, private router:Router, private loginService: LoginService, private registro: RegistroService, private alertController: AlertController) {
-    this.FormCrearUsuario = this.fb.group({
-      nombre: ['', Validators.required],
-      contrasena: ['', Validators.required]
-    });
-    
+
     this.loginForm = this.fb.group({
-      nombre: ['', [Validators.required]],
+      nombre: ['', Validators.required],
       password: ['', Validators.required],
     });
 
@@ -41,13 +36,16 @@ export class IngresoUsuarioPage implements OnInit {
 
 
 
-  crearUsuario() {
+async login() {
+  const nombre = this.loginForm.get('nombre')?.value;
+  const password = this.loginForm.get('password')?.value;
 
-    
+  if (this.registro.login(nombre, password)) {
+
     const usuario= {
       
-      nombre: this.FormCrearUsuario.get('nombre')?.value,
-      contrasena: this.FormCrearUsuario.get('contrasena')?.value,
+      nombre: this.loginForm.get('nombre')?.value,
+      password: this.loginForm.get('password')?.value,
 
       
 
@@ -58,17 +56,7 @@ export class IngresoUsuarioPage implements OnInit {
     this.loginService.setNombre = usuario.nombre
     this.loginService.setUserIsLogged(true);
     this.router.navigate(['/inicio'])
-    
 
-
-
-}
-
-async login() {
-  const nombre = this.loginForm.get('nombre')?.value;
-  const password = this.loginForm.get('password')?.value;
-
-  if (this.registro.login(nombre, password)) {
     console.log('Inicio de sesión exitoso');
     await this.presentAlert('Inicio de sesión exitoso');
     this.router.navigate(['/inicio'])
